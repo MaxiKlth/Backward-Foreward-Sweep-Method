@@ -10,6 +10,7 @@
 - Adjusts voltage values to account for line impedances and load demands.
 - Input: dynamic: `energyValues`; static: `gridConfiguration` (in the class `GridConfiguration`)
 - OutPut: `currentValues`; `voltageValues`; a boolean `congestionExists` indicating if a current-related grid congestion occured
+- `energyValues`is the amount of energy a node consumes within a 15 min TradingPeriod. Produced energy will be considered as a negative `energyValues`
 
 ## Getting Started
 To utilize this class in your grid analysis:
