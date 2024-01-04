@@ -143,10 +143,10 @@ public class CalculateCurrentVoltageValues {
                     if (matrix[j - 1][actualNode] == 1) {
                         if (energyValues.containsKey(actualNode)) {
                         	if (j==actualNode && isSideLine==false) {
-                        		 temporaryCurrentValue +=energyValues.get(actualNode) / 20 / voltageValues.get(actualNode);
+                        		 temporaryCurrentValue +=energyValues.get(actualNode) / voltageValues.get(actualNode);
                         	} else if (j != actualNode && isSideLine== false) {
                         		isSideLine = true;
-                        		temporarySideLineValue = temporaryCurrentValue + energyValues.get(actualNode) / 420 / voltageValues.get(actualNode);
+                        		temporarySideLineValue = temporaryCurrentValue + energyValues.get(actualNode) / voltageValues.get(actualNode);
                         	} else if (isSideLine == true) {
                         		temporaryCurrentValue = currentValues.get(actualNode) + temporarySideLineValue;
                         	}
