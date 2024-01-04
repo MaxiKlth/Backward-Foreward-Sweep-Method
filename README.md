@@ -15,6 +15,8 @@ To utilize this class in your grid analysis:
 1. Instantiate the `CalculateCurrentVoltageValues` class in your Java project.
 2. Configure your grid parameters (e.g., nominal voltage, max current, node count).
 3. Call the `identifyGridCongestion` method to start the analysis process.
+4. In default mode the `energyValues`are randomly assigned - send the corrent `energyValues`accordingly.
+5. The `currentValues`are at the moment not written into a file or the console. If you want to so, please implement it.
 
 ## Usage
 The main functionalities of the class are:
