@@ -8,6 +8,8 @@
 - Performs power flow calculations to evaluate the grid's performance.
 - Detects grid congestion by comparing current flow against predefined thresholds.
 - Adjusts voltage values to account for line impedances and load demands.
+- Input: dynamic: `energyValues`; static: `gridConfiguration` (in the class `GridConfiguration`)
+- OutPut: `currentValues`; `voltageValues`; a boolean `congestionExists` indicating if a current-related grid congestion occured
 
 ## Getting Started
 To utilize this class in your grid analysis:
@@ -17,6 +19,7 @@ To utilize this class in your grid analysis:
 3. Call the `identifyGridCongestion` method to start the analysis process.
 4. In default mode the `energyValues`are randomly assigned - send the corrent `energyValues`accordingly.
 5. The `currentValues`are at the moment not written into a file or the console. If you want to so, please implement it.
+6. If based on that the `energyValues` are recalculated (e.g. by using ADMM), the code provides the possible to calculate again the `afterMatching`
 
 ## Usage
 The main functionalities of the class are:
