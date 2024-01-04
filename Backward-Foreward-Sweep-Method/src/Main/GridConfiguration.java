@@ -7,6 +7,7 @@ public class GridConfiguration {
 	int[][] matrix33 = new int[34][34];
 	double[][] impedanceMatrix33 = new double [34][34];
 	int[][] matrix5 = new int[6][6];
+	double[][] impedanceMatrix5 = new double [6][6];
 	HashMap<Integer, Double> energyValues; 
 	int maxDefaultEnergyValue = 400;
 	
@@ -111,7 +112,11 @@ public class GridConfiguration {
         impedanceMatrix33[31][32] = 0.5302;
         
         
-        
+        impedanceMatrix5[0][1] = 0.047;
+        impedanceMatrix5[1][2] = 0.2511;
+        impedanceMatrix5[2][3] = 0.1864;
+        impedanceMatrix5[3][4] = 0.1941;
+        impedanceMatrix5[4][5] = 0.707;
         // Fülle die Matrix mit den Verbindungen
         for(int[] connection33 : connections33) {
             int start = connection33[0];
